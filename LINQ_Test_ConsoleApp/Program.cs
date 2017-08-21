@@ -10,6 +10,7 @@ namespace LINQ_Test_ConsoleApp
     class Program
     {
         static SampleLinq_Take linqTake = new SampleLinq_Take();
+        static SampleNull sampleNull = new SampleNull();
 
         /// <summary>
         /// エントリ
@@ -21,8 +22,10 @@ namespace LINQ_Test_ConsoleApp
             //MsgSample(args);
 
             // LINQ Takeのサンプル
-            linqTake.Test1();
+            //linqTake.Test1();
 
+            // 条件演算子、null合体演算子、null条件演算子のサンプル
+            sampleNull.Test1();
 
             // 後処理
             End();
