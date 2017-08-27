@@ -11,7 +11,8 @@ namespace LINQ_Test_ConsoleApp
     {
         static SampleLinq_Take linqTake = new SampleLinq_Take();
         static SampleNull sampleNull = new SampleNull();
-
+        static SampleVar sampleVar = new SampleVar();
+  
         /// <summary>
         /// エントリ
         /// </summary>
@@ -25,7 +26,10 @@ namespace LINQ_Test_ConsoleApp
             //linqTake.Test1();
 
             // 条件演算子、null合体演算子、null条件演算子のサンプル
-            sampleNull.Test1();
+            //sampleNull.Test1();
+
+            // var のサンプル
+            sampleVar.test1();
 
             // 後処理
             End();
@@ -55,6 +59,40 @@ namespace LINQ_Test_ConsoleApp
             Common.WriteLineMsg("プログラムを終了します。何かキーを押してください。");
             ReadKey();
             #endif
+        }
+
+        /// <summary>
+        /// WriteLine 新旧サンプル
+        /// </summary>
+        static void WriteSample()
+        {
+            string str1 = "8";
+            string str2 = "27";
+
+            // 古い書き方
+            WriteLine("今日は{0}月の{1}日です。", str1, str2);
+
+            // 新しい書き方
+            WriteLine($"今日は{str1}月の{str2}日です。");
+        }
+
+        /// <summary>
+        /// コメント・トークンの例
+        /// </summary>
+        static void CommentSample()
+        {
+            // TODOこれは表示されない
+            // TODO:これは表示される
+
+            // 参考：https://www.slideshare.net/ssagawa/ss-14579535　P37
+
+            // TODO: 未実装のため、新たにコードを追加する必要がある個所。
+
+            // HACK: 実装済みだが、コードをさらに改善する必要がある個所。
+
+            // UNDONE: 未完成のため、さらにコードを編集する必要がある個所。
+
+            // UnresolvedMergeConflict コードのマージ（統合）に失敗した場合に追加されるトークン。
         }
     }
 }
